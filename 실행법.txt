@@ -1,0 +1,32 @@
+﻿실행법
+
+(pem 의 비밀번호 : 1539)
+
+1. 터미널 총 네개 오픈
+
+1. 터미널 하나에서 ./server1 
+
+2. 나머지 터미널에서 ./client1
+ - user name 세팅
+
+----------------------------------------------
+
+컴파일 : 1.  (sudo) gcc -g -Wall -pthread -c client1.c -o client1.o  (서버는 client1 부분을 server1으로 변경)
+            2.  (sudo) gcc -g -Wall -pthread -o client1 client1.o common.o reentrant.o -lssl -lcrypto (서버는 //)
+
+----------------------------------------------
+
+@ssl/multi thread/mutex 사용@
+
+미리 생성한 key 이용 
+
+openssl로 server 와 client 연결
+
+클라이언트 연결시 thread 할당 
+
+클라이언트에서 데이터를 전송하는 함수와 읽는 함수에게 각각 thread를 할당하여 multi thread 사용
+
+서버에서 데이터를 전송할때 mutex 사용 
+
+---------------------------------------------
+
