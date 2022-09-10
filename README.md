@@ -1,19 +1,29 @@
-@ssl/multi thread/mutex »ç¿ë@
+# C_SSLChat 
 
-(pem ÀÇ ºñ¹Ğ¹øÈ£ : 1539)
+Cë¡œ êµ¬í˜„í•œ SSL Chat Program
 
-1. ÅÍ¹Ì³Î ÃÑ ³×°³ ¿ÀÇÂ
+# About
+- OpensSSLì„ ì‚¬ìš©í•œ SSL ì†Œì¼“ í”„ë¡œê·¸ë˜ë°
+- ServerëŠ” multi Threadë¡œ êµ¬í˜„, Mutexë¡œ ìƒí˜¸ë°°ì œ
+- ClientëŠ” serverì— ì ‘ì†í•˜ì—¬ Clientê°„ Chatting ìˆ˜í–‰
 
-1. ÅÍ¹Ì³Î ÇÏ³ª¿¡¼­ ./server1 
+# Youtube
+[![Video Label](http://img.youtube.com/vi/jtW0UPuzkzs/0.jpg)](https://www.youtube.com/watch?v=jtW0UPuzkzs)
 
-2. ³ª¸ÓÁö ÅÍ¹Ì³Î¿¡¼­ ./client1
- - user name ¼¼ÆÃ
+# Run
 
-----------------------------------------------
+@ssl/multi thread/mutex ì‚¬ìš©@
 
-ÄÄÆÄÀÏ : 1.  (sudo) gcc -g -Wall -pthread -c client1.c -o client1.o  (¼­¹ö´Â client1 ºÎºĞÀ» server1À¸·Î º¯°æ)
-            2.  (sudo) gcc -g -Wall -pthread -o client1 client1.o common.o reentrant.o -lssl -lcrypto (¼­¹ö´Â //)
+(pem ì˜ ë¹„ë°€ë²ˆí˜¸ : 1539)
 
-----------------------------------------------
+1. í„°ë¯¸ë„ ì´ ë„¤ê°œ ì˜¤í”ˆ
 
+1. í„°ë¯¸ë„ í•˜ë‚˜ì—ì„œ ./server1 
 
+2. ë‚˜ë¨¸ì§€ í„°ë¯¸ë„ì—ì„œ ./client1
+ - user name ì„¸íŒ…
+
+# Compile
+
+ì»´íŒŒì¼ : 1.  (sudo) gcc -g -Wall -pthread -c client1.c -o client1.o  (ì„œë²„ëŠ” client1 ë¶€ë¶„ì„ server1ìœ¼ë¡œ ë³€ê²½)
+            2.  (sudo) gcc -g -Wall -pthread -o client1 client1.o common.o reentrant.o -lssl -lcrypto (ì„œë²„ëŠ” //)
